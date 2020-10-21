@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
-import './registerServiceWorker'
 import router from './router'
 import store from './store'
+import './style/index.scss'
+import XButton from './lib/button/src/index'
+
+Vue.component(XButton.name, XButton)
 
 Vue.config.productionTip = false
-
 new Vue({
   router,
   store,
