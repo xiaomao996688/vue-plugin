@@ -1,15 +1,51 @@
 <template>
-<div>
-  cccccc
+<div class="button-group">
+  <slot></slot>
 </div>
 </template>
 
 <script>
 export default {
-  name: 'XuttonGroup'
+  name: 'XButtonGroup',
+  mounted() {
+    //   console.log(this.$el.children)
+    for (const node of this.$el.children) {
+      console.log(node)
+      const name = node.name.toLowerCase()
+      if (name !== 'button') {
+        console.warn(`x-button-group的子元素一个是x-button,但是你写的是${name}`)
+      }
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-.x-button {}
+.button-group {
+  display: inline-flex;
+  vertical-align: middle;
+
+  >.x-button {
+    border-radius: 0;
+
+    &:not(:first-child) {
+      margin-left: -1px;
+    }
+
+    &：first-child {
+      border-top-left-radius: var(--border-radius);
+      border-bottom-left-radius: var(--border-radius);
+    }
+
+    &:last-child {
+      border-top-right-radius: var(--border-radius);
+      border-bottom-right-radius: var(--border-radius);
+    }
+
+    &:hover {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
 </style>
