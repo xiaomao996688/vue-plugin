@@ -9,8 +9,12 @@
 </template>
 
 <script>
+import XIcon from '../../icon/src/icon'
 export default {
   name: 'XButton',
+  components: {
+    'x-icon': XIcon
+  },
   props: {
     icon: {},
     loading: {

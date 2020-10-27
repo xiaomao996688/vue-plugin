@@ -1,16 +1,16 @@
 /* eslint-disable no-undef */
-import { shallowMount, mount } from '@vue/test-utils'
+import { shallowMount } from '@vue/test-utils'
 import Button from '../src/button.vue'
 // import XIcon from '../../icon/src/icon.vue'
-console.log(Button, 'button')
+// console.log(Button, 'button')
 describe('button test', () => {
   it('create button set icon', () => {
-    const wrapper = mount(Button, {
+    const wrapper = shallowMount(Button, {
       propsData: {
         icon: 'settings'
       }
     })
-    console.log(wrapper)
+    expect(wrapper.exists()).toBe(true)
     // console.log(shallowMount)
   })
 })
