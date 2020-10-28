@@ -1,10 +1,12 @@
 {
-  "name": "vue-plugin",
-  "version": "0.1.0",
+  "name": "zhoull-vue-test",
+  "version": "0.0.1",
   "private": true,
+  "main": "./src/lib/index.js",
   "scripts": {
     "dev": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
+    "prod": "vue-cli-service build --target lib ./src/lib/index.js",
     "test": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
