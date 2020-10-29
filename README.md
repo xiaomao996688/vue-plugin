@@ -1,6 +1,10 @@
 # vue-plugin
-
+[![Build Status](https://travis-ci.com/travis-ci/travis-web.svg?branch=master)](https://travis-ci.com/travis-ci/travis-web)
 ## Project setup
+
+## 介绍
+测试项目
+## 安装
 ```
 npm install
 ```
