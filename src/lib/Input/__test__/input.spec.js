@@ -53,8 +53,9 @@ describe('测试事件', () => {
     const input = wrapper.find('input')
     // await wrapper.trigger('change', {
     // })
-    input.element.value = 100
+    input.element.value = 1
     input.trigger('change')
+    expect(input.element.value).toBe('1')
   })
   it('input', () => {
     const wrapper = shallowMount(XInput, {
@@ -65,7 +66,7 @@ describe('测试事件', () => {
     const input = wrapper.find('input')
     // await wrapper.trigger('change', {
     // })
-    input.element.value = 100
+    input.element.value = 10
     input.trigger('input')
   })
   it('focus', () => {
@@ -89,7 +90,7 @@ describe('测试事件', () => {
     const input = wrapper.find('input')
     // await wrapper.trigger('change', {
     // })
-    input.element.value = 100
+    input.element.value = 1000
     input.trigger('blur')
   })
 })
