@@ -10,7 +10,7 @@
     <x-button> 1</x-button>
     <x-button icon="right" :loading="true" icon-position="right"> 下一页</x-button>
   </x-button-group> -->
-  <x-input :value="inputV1" />
+  <x-input :value="inputV1"  @change="handleChange"/>
   <x-input :value="inputV2" :disabled="true" />
   <x-input :value="inputV2" :readonly="true" />
   <x-input :value="inputV2" :error="'用户名错误'" />
@@ -21,13 +21,17 @@
 // @ is an alias to /src
 export default {
   name: 'Home',
-
   data() {
     return {
       loading1: false,
       loading2: false,
       inputV1: '',
       inputV2: ''
+    }
+  },
+  methods: {
+    handleChange(e) {
+      console.log(e.target.value, 'eeee')
     }
   }
 }

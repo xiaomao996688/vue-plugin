@@ -1,6 +1,13 @@
 <template>
 <div class="wrapper" :class="{error}">
-  <input type="text" :value="value" :disabled="disabled" :readonly="readonly">
+  <input type="text"
+    :value="value"
+    :disabled="disabled"
+    :readonly="readonly"
+    @blur="$emit('blur', $event)"
+    @focus="$emit('focus', $event)"
+    @input="$emit('input', $event)"
+    @change="$emit('change', $event)">
   <template v-if="error">
     <x-icon name="error" class="icon-error"></x-icon>
     <span class="error-message">{{error}}</span>
@@ -9,8 +16,11 @@
 </template>
 
 <script>
+import XIcon from '../../../lib/icon/src/index'
 export default {
-
+  components: {
+    'x-icon': XIcon
+  },
   name: 'XInput',
   props: {
     value: {

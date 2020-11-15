@@ -7,7 +7,7 @@
     "dev": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "prod": "vue-cli-service build --target lib --name index ./src/lib/index.js",
-    "test": "vue-cli-service test:unit",
+    "test": "vue-cli-service test:unit ",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
