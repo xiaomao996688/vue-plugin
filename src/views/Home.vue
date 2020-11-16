@@ -10,11 +10,11 @@
     <x-button> 1</x-button>
     <x-button icon="right" :loading="true" icon-position="right"> 下一页</x-button>
   </x-button-group> -->
-  <x-input :value="inputV1"  @change="handleChange"/>
+  <!-- <x-input :value="inputV1"  @change="handleChange"/>
   {{inputV1}}
   <x-input :value="inputV2" :disabled="true" />
   <x-input :value="inputV2" :readonly="true" />
-  <x-input :value="inputV2" :error="'用户名错误'" />
+  <x-input :value="inputV2" :error="'用户名错误'" /> -->
 </div>
 </template>
 
